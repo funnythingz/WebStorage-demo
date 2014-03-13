@@ -8,7 +8,7 @@ var spec;
             localStorage.clear();
 
             it("is empty.", function () {
-                expect(localStorage).to.be.empty;
+                localStorage.should.be.empty;
             });
         });
 
@@ -20,7 +20,7 @@ var spec;
             };
 
             it("unset", function () {
-                expect(localStorage.getItem(key)).to.null;
+                expect(localStorage.getItem(key)).to.be.null;
             });
 
             it("set", function () {
@@ -34,12 +34,12 @@ var spec;
 
             it("remove", function () {
                 localStorage.removeItem(key);
-                expect(localStorage.getItem(key)).to.null;
+                expect(localStorage.getItem(key)).to.be.null;
             });
 
             it("clear all", function () {
                 localStorage.clear();
-                expect(localStorage).to.be.empty;
+                localStorage.should.be.empty;
             });
         });
     });
